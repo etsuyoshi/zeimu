@@ -1,6 +1,6 @@
 //
 //  MenuViewController.h
-//  Homu3
+//  zeimu3
 //
 //  Created by 遠藤 豪 on 13/07/29.
 //

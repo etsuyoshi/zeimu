@@ -1,6 +1,6 @@
 //
 //  MenuViewController.m
-//  Homu3
+//  zeimu3
 //
 //  Created by 遠藤 豪 on 13/07/29.
 //
@@ -194,7 +194,7 @@ NSMutableArray *sectQuestNoArray = nil;
     if(questName != nil){
         NSBundle *bundle = [NSBundle mainBundle];
         NSString *path = [bundle pathForResource:
-                          [NSString stringWithFormat:@"homu%d", sectNo]
+                          [NSString stringWithFormat:@"zeimu%d", sectNo]
                                           ofType:@"csv"];
         Quiz *quiz = [[Quiz alloc] initWithKokuhukuMode:questNo];
         [quiz readFromCSV:path];
@@ -339,7 +339,7 @@ NSMutableArray *sectQuestNoArray = nil;
     
     // クイズデータのファイルパスを取得する
     NSBundle *bundle = [NSBundle mainBundle];
-    NSString *path= [bundle pathForResource:[NSString stringWithFormat:@"homu%d",selectedSectNo]
+    NSString *path= [bundle pathForResource:[NSString stringWithFormat:@"zeimu%d",selectedSectNo]
                                      ofType:@"csv"];
     
     // クイズデータを読み込む
