@@ -439,7 +439,6 @@
 				347C7030178C4367004DCDE6 /* ResultViewController.m */,
 				341D91D71792AAF300023EBD /* TimeSeriesViewController.h */,
 				341D91D81792AAF300023EBD /* TimeSeriesViewController.m */,
-				E95B49BF1685D377005ECF09 /* Supporting Files */,
 				E95B49DD1685D465005ECF09 /* Quiz.h */,
 				E95B49DE1685D465005ECF09 /* Quiz.m */,
 				E95B49E01685D4A0005ECF09 /* QuizItem.h */,
@@ -450,6 +449,7 @@
 				3415CE51177AAB4B007D9BEB /* ExplainViewController.m */,
 				34522F3817A0D70700091578 /* ConfigViewController.h */,
 				34522F3917A0D70700091578 /* ConfigViewController.m */,
+				E95B49BF1685D377005ECF09 /* Supporting Files */,
 			);
 			name = zeimu3;
 			path = Quiz;
@@ -551,7 +551,7 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 			};
-			buildConfigurationList = E95B49AE1685D377005ECF09 /* Build configuration list for PBXProject "zeimu3" */;
+			buildConfigurationList = E95B49AE1685D377005ECF09 /* Build configuration list for PBXProject "Zeimu3" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -869,7 +869,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E95B49AE1685D377005ECF09 /* Build configuration list for PBXProject "zeimu3" */ = {
+		E95B49AE1685D377005ECF09 /* Build configuration list for PBXProject "Zeimu3" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E95B49D61685D377005ECF09 /* Debug */,

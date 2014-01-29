@@ -310,7 +310,8 @@ long sumOfWrong = 0;
 {
     if (self.quiz.isKokuhukuMode){
         //弱点克服モードの場合、一問解答した後は画面を戻す
-        [self dismissModalViewControllerAnimated:YES];
+//        [self dismissModalViewControllerAnimated:YES];//deprecated!
+        [self dismissViewControllerAnimated:YES completion:nil];
         
     }else if ([self.quiz.usedQuizItems count] >= kQuizCount){
         // 出題済み数を数えて、終了数になっている場合には、開始画面に戻る
@@ -465,7 +466,8 @@ long sumOfWrong = 0;
 }
 
 - (IBAction)pushReturn:(id)sender {
-    [self dismissModalViewControllerAnimated:YES];
+//    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
