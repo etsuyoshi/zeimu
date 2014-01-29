@@ -36,7 +36,8 @@ NSArray* gotou = nil;
 //スワイプで戻る(http://labs.techfirm.co.jp/ipad/cho/466)
 -(IBAction)swipeHandler:(UISwipeGestureRecognizer *)sender{
     //スワイプしてからすぐに別の章を表示させると前の章のデータがそのまま表示されてしまう(残っているからここで初期化しておく必要あり？)
-    [self dismissModalViewControllerAnimated:YES];
+//    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)viewDidLoad
@@ -50,7 +51,7 @@ NSArray* gotou = nil;
     [self.view addGestureRecognizer:gestureRecognizer];
     
 //    _sectorName = @"SECT00X";
-    NSLog((NSString*)_sectorName);
+//    NSLog((NSString*)_sectorName);
     
     NSUserDefaults* defaults_output = [NSUserDefaults standardUserDefaults];
     // NSArrayの読み込み試験

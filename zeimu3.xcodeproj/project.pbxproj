@@ -698,8 +698,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tsuyoshi Endo (ZRYHJUXHX2)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Tsuyoshi Endo (ZRYHJUXHX2)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -707,8 +707,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=*]" = "";
+				PROVISIONING_PROFILE = "B4E16796-0EA1-406C-B3F0-9F90F57C5657";
+				"PROVISIONING_PROFILE[sdk=*]" = "EA309F9B-E32D-451E-B8B6-4B4BF86813D9";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -717,7 +717,7 @@
 		3400E8FB177EE10100523BB0 /* Release copy */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Tsuyoshi Endo (VGD3AUTV7W)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tsuyoshi Endo (ZRYHJUXHX2)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Quiz/zeimu3-Prefix.pch";
 				INFOPLIST_FILE = "Quiz/zeimu3-Info.plist";
@@ -727,7 +727,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = zeimu3;
-				PROVISIONING_PROFILE = "C1F991E4-953E-44BC-822E-08B98D6BA6D6";
+				PROVISIONING_PROFILE = "EA309F9B-E32D-451E-B8B6-4B4BF86813D9";
 				WRAPPER_EXTENSION = app;
 			};
 			name = "Release copy";
@@ -741,9 +741,9 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tsuyoshi Endo (ZRYHJUXHX2)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Tsuyoshi Endo (ZRYHJUXHX2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tsuyoshi Endo (ZRYHJUXHX2)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -752,9 +752,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=*]" = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "EA309F9B-E32D-451E-B8B6-4B4BF86813D9";
+				"PROVISIONING_PROFILE[sdk=*]" = "EA309F9B-E32D-451E-B8B6-4B4BF86813D9";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EA309F9B-E32D-451E-B8B6-4B4BF86813D9";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -763,7 +763,7 @@
 		3400E8FD177FE41B00523BB0 /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Tsuyoshi Endo (VGD3AUTV7W)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tsuyoshi Endo (ZRYHJUXHX2)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Quiz/zeimu3-Prefix.pch";
 				INFOPLIST_FILE = "Quiz/zeimu3-Info.plist";
@@ -773,7 +773,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = zeimu3;
-				PROVISIONING_PROFILE = "C1F991E4-953E-44BC-822E-08B98D6BA6D6";
+				PROVISIONING_PROFILE = "EA309F9B-E32D-451E-B8B6-4B4BF86813D9";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Distribution;
@@ -787,8 +787,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tsuyoshi Endo (ZRYHJUXHX2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tsuyoshi Endo (ZRYHJUXHX2)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -803,7 +803,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "EA309F9B-E32D-451E-B8B6-4B4BF86813D9";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -817,8 +817,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tsuyoshi Endo (ZRYHJUXHX2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tsuyoshi Endo (ZRYHJUXHX2)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -827,8 +827,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "EA309F9B-E32D-451E-B8B6-4B4BF86813D9";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EA309F9B-E32D-451E-B8B6-4B4BF86813D9";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -837,7 +837,7 @@
 		E95B49D91685D377005ECF09 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Tsuyoshi Endo (VGD3AUTV7W)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tsuyoshi Endo (ZRYHJUXHX2)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Quiz/zeimu3-Prefix.pch";
 				INFOPLIST_FILE = "Quiz/zeimu3-Info.plist";
@@ -847,7 +847,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = zeimu3;
-				PROVISIONING_PROFILE = "C1F991E4-953E-44BC-822E-08B98D6BA6D6";
+				PROVISIONING_PROFILE = "EA309F9B-E32D-451E-B8B6-4B4BF86813D9";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -855,7 +855,7 @@
 		E95B49DA1685D377005ECF09 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Tsuyoshi Endo (VGD3AUTV7W)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tsuyoshi Endo (ZRYHJUXHX2)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Quiz/zeimu3-Prefix.pch";
 				INFOPLIST_FILE = "Quiz/zeimu3-Info.plist";
@@ -865,7 +865,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = zeimu3;
-				PROVISIONING_PROFILE = "C1F991E4-953E-44BC-822E-08B98D6BA6D6";
+				PROVISIONING_PROFILE = "EA309F9B-E32D-451E-B8B6-4B4BF86813D9";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

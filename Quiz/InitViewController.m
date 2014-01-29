@@ -83,17 +83,16 @@
     // クイズデータのファイルパスを取得する
     NSBundle *bundle = [NSBundle mainBundle];
     NSString *path;
-
+    
     
     
     // 識別子をチェックして、クイズ画面を表示するときか確認する
-    if ([segue.identifier isEqualToString:@"segueSelect1"])
-    {
+    if ([segue.identifier isEqualToString:@"segueSelect1"]){
         
-//        path = [bundle pathForResource:@"zeimu1"
-//                                ofType:@"csv"];
         path = [bundle pathForResource:@"zeimu1"
                                 ofType:@"csv"];
+//        path = [bundle pathForResource:@"test0000"
+//                                ofType:@"csv"];
         
         // ファイルから読み込んで、ローカル変数quizデータに格納する
         [quiz readFromCSV:path];
