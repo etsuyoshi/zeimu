@@ -1030,9 +1030,6 @@
     </scenes>
     <resources>
         <image name="brown_light.jpg" width="600" height="450"/>
-        <image name="brown_light.jpg" width="600" height="450"/>
-        <image name="brown_light.jpg" width="600" height="450"/>
-        <image name="brown_light.jpg" width="600" height="450"/>
         <image name="building.png" width="502" height="666"/>
         <image name="button-スタート.png" width="217" height="60"/>
         <image name="button-回答終了_mini.png" width="100" height="40"/>
@@ -1041,20 +1038,11 @@
         <image name="button_弱点克服.png" width="200" height="60"/>
         <image name="button_成績表.png" width="200" height="60"/>
         <image name="button_戻る.png" width="200" height="60"/>
-        <image name="button_戻る.png" width="200" height="60"/>
-        <image name="button_戻る.png" width="200" height="60"/>
-        <image name="button_戻る.png" width="200" height="60"/>
-        <image name="button_第一章_red.png" width="100" height="60"/>
         <image name="button_第一章_red.png" width="100" height="60"/>
         <image name="button_第三章_blue.png" width="100" height="60"/>
-        <image name="button_第三章_blue.png" width="100" height="60"/>
-        <image name="button_第二章_green.png" width="100" height="60"/>
         <image name="button_第二章_green.png" width="100" height="60"/>
         <image name="button_第五章_dpBlue.png" width="100" height="60"/>
-        <image name="button_第五章_dpBlue.png" width="100" height="60"/>
         <image name="button_第六章_pink.png" width="100" height="60"/>
-        <image name="button_第六章_pink.png" width="100" height="60"/>
-        <image name="button_第四章_yellow.png" width="100" height="60"/>
         <image name="button_第四章_yellow.png" width="100" height="60"/>
         <image name="button_解答履歴を消去.png" width="210" height="60"/>
         <image name="button_設定.png" width="200" height="60"/>

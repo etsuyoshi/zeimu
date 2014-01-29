@@ -35,7 +35,8 @@
 
 //スワイプで戻る
 -(IBAction)swipeHandler:(UISwipeGestureRecognizer *)sender{
-    [self dismissModalViewControllerAnimated:YES];
+//    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

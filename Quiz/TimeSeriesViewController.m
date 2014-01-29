@@ -292,7 +292,8 @@ NSArray* gotou = nil;
 		return [NSNumber numberWithDouble:index+1];
 	else
 	{
-		if(plot.identifier == @"Bar Plot 1"){
+//		if(plot.identifier == @"Bar Plot 1"){
+        if([plot.identifier isEqual:@"Bar plot 1"]){
             //indexの値に応じた返り値を出力する
 //			return [NSNumber numberWithDouble:(index+1)*2.0f];//返すデータ
             NSLog(@"正解履歴%d = %@", index, [seikai objectAtIndex:index]);

@@ -90,6 +90,8 @@
     if ([segue.identifier isEqualToString:@"segueSelect1"])
     {
         
+//        path = [bundle pathForResource:@"zeimu1"
+//                                ofType:@"csv"];
         path = [bundle pathForResource:@"zeimu1"
                                 ofType:@"csv"];
         
@@ -152,6 +154,7 @@
 }
 
 - (IBAction)pushRtn:(id)sender {
-    [self dismissModalViewControllerAnimated:YES];
+//    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

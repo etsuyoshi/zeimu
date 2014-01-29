@@ -39,6 +39,7 @@
 		347A8BE117A7B93B00588126 /* WrongQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 347A8BE017A7B93B00588126 /* WrongQuestion.m */; };
 		347C7031178C4367004DCDE6 /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347C7030178C4367004DCDE6 /* ResultViewController.m */; };
 		348B1CA417954F00003C361E /* ArrayStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 348B1CA317954F00003C361E /* ArrayStore.m */; };
+		34942C631898E48D00095A37 /* test0000.csv in Resources */ = {isa = PBXBuildFile; fileRef = 34942C621898E48D00095A37 /* test0000.csv */; };
 		349B1935177B4BCD0099DB56 /* InitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 349B1934177B4BCD0099DB56 /* InitViewController.m */; };
 		349B1938177B5A8B0099DB56 /* TransViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 349B1937177B5A8B0099DB56 /* TransViewController.m */; };
 		349B193F177B60F00099DB56 /* _homu6.csv in Resources */ = {isa = PBXBuildFile; fileRef = 349B1939177B60F00099DB56 /* _homu6.csv */; };
@@ -210,6 +211,7 @@
 		347C7030178C4367004DCDE6 /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
 		348B1CA217954EEA003C361E /* ArrayStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayStore.h; sourceTree = "<group>"; };
 		348B1CA317954F00003C361E /* ArrayStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayStore.m; sourceTree = "<group>"; };
+		34942C621898E48D00095A37 /* test0000.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test0000.csv; sourceTree = "<group>"; };
 		349B1933177B4BCD0099DB56 /* InitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitViewController.h; sourceTree = "<group>"; };
 		349B1934177B4BCD0099DB56 /* InitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitViewController.m; sourceTree = "<group>"; };
 		349B1936177B5A8B0099DB56 /* TransViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransViewController.h; sourceTree = "<group>"; };
@@ -458,6 +460,7 @@
 		E95B49BF1685D377005ECF09 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				34942C621898E48D00095A37 /* test0000.csv */,
 				345C3C3017E5B7DC00344173 /* zeimu6.csv */,
 				345C3C3117E5B7DC00344173 /* zeimu5.csv */,
 				345C3C3217E5B7DC00344173 /* zeimu4.csv */,
@@ -551,7 +554,7 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 			};
-			buildConfigurationList = E95B49AE1685D377005ECF09 /* Build configuration list for PBXProject "Zeimu3" */;
+			buildConfigurationList = E95B49AE1685D377005ECF09 /* Build configuration list for PBXProject "zeimu3" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -573,6 +576,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34942C631898E48D00095A37 /* test0000.csv in Resources */,
 				E95B49C31685D377005ECF09 /* InfoPlist.strings in Resources */,
 				E95B49CB1685D377005ECF09 /* Default.png in Resources */,
 				E95B49CD1685D377005ECF09 /* Default@2x.png in Resources */,
@@ -869,7 +873,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E95B49AE1685D377005ECF09 /* Build configuration list for PBXProject "Zeimu3" */ = {
+		E95B49AE1685D377005ECF09 /* Build configuration list for PBXProject "zeimu3" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E95B49D61685D377005ECF09 /* Debug */,

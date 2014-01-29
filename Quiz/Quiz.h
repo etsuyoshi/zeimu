@@ -16,7 +16,7 @@
 
 // 次の問題を返すメソッド
 - (QuizItem *)nextQuiz;
-- (QuizItem *)indicatedQuiz:(int)indicatedNo;
+//- (QuizItem *)indicatedQuiz:(int)indicatedNo;
 
 - (id)initWithKokuhukuMode:(int)indicatedNo;
 
