@@ -13,12 +13,14 @@
 
 @property (nonatomic) BOOL isKokuhukuMode;
 @property (nonatomic) int jakutenNo;
+@property (nonatomic) BOOL infiniteNo;
 
 // 次の問題を返すメソッド
 - (QuizItem *)nextQuiz;
 //- (QuizItem *)indicatedQuiz:(int)indicatedNo;
 
 - (id)initWithKokuhukuMode:(int)indicatedNo;
+- (id)initWithSectNo:(int)sectNo;
 
 // 出題済みの情報をクリアするメソッド
 - (void)clear;

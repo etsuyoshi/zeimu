@@ -39,7 +39,6 @@
 		347A8BE117A7B93B00588126 /* WrongQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 347A8BE017A7B93B00588126 /* WrongQuestion.m */; };
 		347C7031178C4367004DCDE6 /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347C7030178C4367004DCDE6 /* ResultViewController.m */; };
 		348B1CA417954F00003C361E /* ArrayStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 348B1CA317954F00003C361E /* ArrayStore.m */; };
-		34942C631898E48D00095A37 /* test0000.csv in Resources */ = {isa = PBXBuildFile; fileRef = 34942C621898E48D00095A37 /* test0000.csv */; };
 		349B1935177B4BCD0099DB56 /* InitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 349B1934177B4BCD0099DB56 /* InitViewController.m */; };
 		349B1938177B5A8B0099DB56 /* TransViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 349B1937177B5A8B0099DB56 /* TransViewController.m */; };
 		349B193F177B60F00099DB56 /* _homu6.csv in Resources */ = {isa = PBXBuildFile; fileRef = 349B1939177B60F00099DB56 /* _homu6.csv */; };
@@ -73,6 +72,7 @@
 		34B08BAB17A907BC002132CC /* button-回答終了_mini.png in Resources */ = {isa = PBXBuildFile; fileRef = 34B08BAA17A907BC002132CC /* button-回答終了_mini.png */; };
 		34B08BAD17A907D7002132CC /* button-解説_mini.png in Resources */ = {isa = PBXBuildFile; fileRef = 34B08BAC17A907D7002132CC /* button-解説_mini.png */; };
 		34CD303817A9203C0091ADEC /* button-スタート.png in Resources */ = {isa = PBXBuildFile; fileRef = 34CD303717A9203C0091ADEC /* button-スタート.png */; };
+		34FD72D6189A3B6900648161 /* test0000.csv in Resources */ = {isa = PBXBuildFile; fileRef = 34FD72D5189A3B6900648161 /* test0000.csv */; };
 		E95B49B91685D377005ECF09 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E95B49B81685D377005ECF09 /* UIKit.framework */; };
 		E95B49BB1685D377005ECF09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E95B49BA1685D377005ECF09 /* Foundation.framework */; };
 		E95B49BD1685D377005ECF09 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E95B49BC1685D377005ECF09 /* CoreGraphics.framework */; };
@@ -211,7 +211,6 @@
 		347C7030178C4367004DCDE6 /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
 		348B1CA217954EEA003C361E /* ArrayStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayStore.h; sourceTree = "<group>"; };
 		348B1CA317954F00003C361E /* ArrayStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayStore.m; sourceTree = "<group>"; };
-		34942C621898E48D00095A37 /* test0000.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test0000.csv; sourceTree = "<group>"; };
 		349B1933177B4BCD0099DB56 /* InitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitViewController.h; sourceTree = "<group>"; };
 		349B1934177B4BCD0099DB56 /* InitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitViewController.m; sourceTree = "<group>"; };
 		349B1936177B5A8B0099DB56 /* TransViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransViewController.h; sourceTree = "<group>"; };
@@ -247,6 +246,7 @@
 		34B08BAA17A907BC002132CC /* button-回答終了_mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-回答終了_mini.png"; sourceTree = "<group>"; };
 		34B08BAC17A907D7002132CC /* button-解説_mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-解説_mini.png"; sourceTree = "<group>"; };
 		34CD303717A9203C0091ADEC /* button-スタート.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-スタート.png"; sourceTree = "<group>"; };
+		34FD72D5189A3B6900648161 /* test0000.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test0000.csv; sourceTree = "<group>"; };
 		E95B49B41685D377005ECF09 /* zeimu3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zeimu3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E95B49B81685D377005ECF09 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E95B49BA1685D377005ECF09 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -460,7 +460,7 @@
 		E95B49BF1685D377005ECF09 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				34942C621898E48D00095A37 /* test0000.csv */,
+				34FD72D5189A3B6900648161 /* test0000.csv */,
 				345C3C3017E5B7DC00344173 /* zeimu6.csv */,
 				345C3C3117E5B7DC00344173 /* zeimu5.csv */,
 				345C3C3217E5B7DC00344173 /* zeimu4.csv */,
@@ -553,6 +553,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0450;
+				TargetAttributes = {
+					E95B49B31685D377005ECF09 = {
+						DevelopmentTeam = VGD3AUTV7W;
+					};
+				};
 			};
 			buildConfigurationList = E95B49AE1685D377005ECF09 /* Build configuration list for PBXProject "zeimu3" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -576,7 +581,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34942C631898E48D00095A37 /* test0000.csv in Resources */,
+				34FD72D6189A3B6900648161 /* test0000.csv in Resources */,
 				E95B49C31685D377005ECF09 /* InfoPlist.strings in Resources */,
 				E95B49CB1685D377005ECF09 /* Default.png in Resources */,
 				E95B49CD1685D377005ECF09 /* Default@2x.png in Resources */,
@@ -717,10 +722,11 @@
 		3400E8FB177EE10100523BB0 /* Release copy */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tsuyoshi Endo (ZRYHJUXHX2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Quiz/zeimu3-Prefix.pch";
 				INFOPLIST_FILE = "Quiz/zeimu3-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/iOS\"",
@@ -763,10 +769,11 @@
 		3400E8FD177FE41B00523BB0 /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tsuyoshi Endo (ZRYHJUXHX2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Quiz/zeimu3-Prefix.pch";
 				INFOPLIST_FILE = "Quiz/zeimu3-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/iOS\"",
@@ -837,10 +844,11 @@
 		E95B49D91685D377005ECF09 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tsuyoshi Endo (ZRYHJUXHX2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Quiz/zeimu3-Prefix.pch";
 				INFOPLIST_FILE = "Quiz/zeimu3-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/iOS\"",
@@ -855,10 +863,11 @@
 		E95B49DA1685D377005ECF09 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tsuyoshi Endo (ZRYHJUXHX2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Quiz/zeimu3-Prefix.pch";
 				INFOPLIST_FILE = "Quiz/zeimu3-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/iOS\"",

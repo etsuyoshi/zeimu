@@ -166,13 +166,14 @@ NSMutableArray *sectQuestNoArray = nil;
 - (void)alertView: (UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     
-    NSUserDefaults* defaults = nil;
+//    NSUserDefaults* defaults = nil;
     
     // 押されたボタンの確認
     switch (buttonIndex) {
         case 0:
             // 終了が押された場合の処理
-            [self dismissModalViewControllerAnimated:YES];
+//            [self dismissModalViewControllerAnimated:YES];
+            [self dismissViewControllerAnimated:YES completion:nil];
             break;
         case 1:
             // このボタンはない。

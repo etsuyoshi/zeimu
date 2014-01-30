@@ -78,23 +78,30 @@
     
     
     // クイズデータを読み込む
-    Quiz *quiz = [[Quiz alloc] init];
+//    Quiz *quiz = [[Quiz alloc] init];
+    Quiz *quiz;
     
     // クイズデータのファイルパスを取得する
     NSBundle *bundle = [NSBundle mainBundle];
-    NSString *path;
+    NSString *path = [bundle pathForResource:@"test0000"
+                                     ofType:@"csv"];
+    
+    //test0000を取得してセクター毎に分ける
     
     
+    
+//    NSMutableArray *arrSector1;
     
     // 識別子をチェックして、クイズ画面を表示するときか確認する
     if ([segue.identifier isEqualToString:@"segueSelect1"]){
         
-        path = [bundle pathForResource:@"zeimu1"
-                                ofType:@"csv"];
+//        path = [bundle pathForResource:@"zeimu1"
+//                                ofType:@"csv"];
 //        path = [bundle pathForResource:@"test0000"
 //                                ofType:@"csv"];
         
         // ファイルから読み込んで、ローカル変数quizデータに格納する
+        quiz = [[Quiz alloc]initWithSectNo:0];
         [quiz readFromCSV:path];
         
         
@@ -109,10 +116,11 @@
         [vc setQuiz:quiz];
     }else if([segue.identifier isEqualToString:@"segueSelect2"]){
         
-        path = [bundle pathForResource:@"zeimu2"
-                                ofType:@"csv"];
+//        path = [bundle pathForResource:@"zeimu2"
+//                                ofType:@"csv"];
         
         // ファイルから読み込んで、ローカル変数quizデータに格納する
+        quiz = [[Quiz alloc]initWithSectNo:1];
         [quiz readFromCSV:path];
         
         
@@ -126,26 +134,33 @@
 //        [vc setQuiz:self.quiz];
         [vc setQuiz:quiz];
     }else if([segue.identifier isEqualToString:@"segueSelect3"]){
-        path = [bundle pathForResource:@"zeimu3"
-                                ofType:@"csv"];
+//        path = [bundle pathForResource:@"zeimu3"
+//                                ofType:@"csv"];
+        quiz = [[Quiz alloc]initWithSectNo:2];
         [quiz readFromCSV:path];
         vc = segue.destinationViewController;
         [vc setQuiz:quiz];
     }else if([segue.identifier isEqualToString:@"segueSelect4"]){
-        path = [bundle pathForResource:@"zeimu4"
-                                ofType:@"csv"];
+        
+//        path = [bundle pathForResource:@"zeimu4"
+//                                ofType:@"csv"];
+        quiz = [[Quiz alloc]initWithSectNo:3];
         [quiz readFromCSV:path];
         vc = segue.destinationViewController;
         [vc setQuiz:quiz];
     }else if([segue.identifier isEqualToString:@"segueSelect5"]){
-        path = [bundle pathForResource:@"zeimu5"
-                                ofType:@"csv"];
+//        path = [bundle pathForResource:@"zeimu5"
+//                                ofType:@"csv"];
+        
+        quiz = [[Quiz alloc]initWithSectNo:4];
         [quiz readFromCSV:path];
         vc = segue.destinationViewController;
         [vc setQuiz:quiz];
     }else if([segue.identifier isEqualToString:@"segueSelect6"]){
-        path = [bundle pathForResource:@"zeimu6"
-                                ofType:@"csv"];
+//        path = [bundle pathForResource:@"zeimu6"
+//                                ofType:@"csv"];
+        NSLog(@"segueselect6");
+        quiz = [[Quiz alloc]initWithSectNo:5];
         [quiz readFromCSV:path];
         vc = segue.destinationViewController;
         [vc setQuiz:quiz];

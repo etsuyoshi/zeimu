@@ -8,7 +8,9 @@
 @synthesize usedQuizItems = _usedQuizItems;
 @synthesize isKokuhukuMode = _isKokuhukuMode;
 @synthesize jakutenNo = _jakutenNo;
+@synthesize infiniteNo = _infiniteNo;
 
+NSArray *arrSectName;
 // 初期化処理
 - (id)init
 {
@@ -19,18 +21,45 @@
         _quizItemsArray = nil;
         _usedQuizItems = [[NSMutableArray alloc] init];
         _isKokuhukuMode = false;
+        
+        _infiniteNo = -1;//指定がない場合は-1に初期化
+    }
+    return self;
+}
+
+-(id)initWithSectNo:(int)sectNo{
+    self = [self init];
+    
+    if(self){
+        //セクター番号の指定
+        _infiniteNo = sectNo;
+        
+        //_infiniteNoで指定されたインデックス番号に対応するCSVファイル内でのセクター名称
+        arrSectName = [NSArray arrayWithObjects:
+                       @"SECT001",
+                       @"SECT002",
+                       @"SECT003",
+                       @"SECT004",
+                       @"SECT005",
+                       @"SECT006",
+                       @"SECT007",
+                       @"SECT008",
+                       @"SECT009",
+                       @"SECT010",
+                       @"SECT011",
+                       nil];
     }
     return self;
 }
 
 - (id)initWithKokuhukuMode:(int)jakutenNo{
     
-    self = [super init];
+    self = [self init];
     if (self)
     {
-        // インスタンス変数の初期化
-        _quizItemsArray = nil;
-        _usedQuizItems = [[NSMutableArray alloc] init];
+        // インスタンス変数の初期化(self initで実行)
+//        _quizItemsArray = nil;
+//        _usedQuizItems = [[NSMutableArray alloc] init];
         
         //弱点克服モード
         _isKokuhukuMode = TRUE;
@@ -250,22 +279,16 @@
                     
                     
                     NSString *sectionNo = [eachInLine objectAtIndex:0];
-                    //                NSString *questionNo_temp = [eachInLine objectAtIndex:1];
-                    //                NSString *questionNo = [questionNo_temp substringWithRange:NSMakeRange(1,3)];
-                    //                NSString *questionNo_temp = [@"abcdefgh" substringWithRange:NSMakeRange(1,3)];
-                    //                NSString *questionNo = [questionNo_temp substringWithRange:NSMakeRange(1, 3)];
-                    //                NSString *questionNo = [eachInLine objectAtIndex:1];
-                    //                NSString *questionNo = [@"Q0010" substringWithRange:NSMakeRange(1,3)];
+                    if(_infiniteNo != -1){//特定の章番号が指定されているかどうか
+                        if(![sectionNo isEqualToString:arrSectName[_infiniteNo]]){//指定された章と現在行の章番号が同じどうか(NSString型比較)
+                            //もし違うなら以下のコードを実行せずに次の行を探索するため上記のfor分に戻る
+                            continue;
+                        }
+                    }
+                    
                     NSString *questionNo = [eachInLine objectAtIndex:1];
-//                    NSLog(@"%@", questionNo);
                     NSString *questionStr = [eachInLine objectAtIndex:2];
                     NSString *sentence =[eachInLine objectAtIndex:3];
-                    //カンマで区切られた各項目eachを個別に分割
-                    //                curItem.question = [NSString stringWithFormat:@"【%@】No%@ 〜 %@ 〜\n %@",
-                    //                                    sectionNo,
-                    //                                    questionNo,
-                    //                                    questionStr,
-                    //                                    sentence];
                     curItem.sectorName = sectionNo;
                     curItem.questionNo = questionNo;
                     
@@ -279,9 +302,9 @@
                     
                     if(answering != 0){
                         seikairitu = [NSString stringWithFormat:@"%d",
-                                     (int)(((double)answering - (double)UncorrectAns)/(double)answering * 100.0f)];
+                                      (int)(((double)answering - (double)UncorrectAns)/(double)answering * 100.0f)];
                     }
-//                    NSLog(@"%@", seikairitu);
+                    //                    NSLog(@"%@", seikairitu);
                     questionNo = [questionNo substringWithRange:NSMakeRange(1,3)];//="XXX"
                     questionNo = [NSString stringWithFormat:@"No%@",
                                   [NSString stringWithFormat:@"%d",[questionNo intValue]]];//="NoX"
@@ -291,32 +314,28 @@
                                         answering,
                                         seikairitu,
                                         sentence];
-                                        
+                    
                     curItem.rightAnswer = [eachInLine objectAtIndex:10];
                     curItem.explanation = [eachInLine objectAtIndex:11];
                     
                     // 選択肢の配列に追加
                     for(int selectionIndex = 4;selectionIndex < 9;selectionIndex ++){
                         [curChoices addObject:[eachInLine objectAtIndex:selectionIndex]];
-                        
-//                        [curChoices addObject:[NSString stringWithFormat:@"(%d)%@",
-//                                               selectionIndex - 3,
-//                                               [eachInLine objectAtIndex:selectionIndex]]];
                     }
                     
                     //空白行である場合、txtファイルであれば選択肢を決定させる必要があるが、
                     //csvファイルである場合に空白行はないので、改行がなされた場合にのみ以下のコードを行う
-                    if (curItem && curChoices)
-                    {
+                    if (curItem && curChoices){
                         // 選択肢を決定
                         curItem.choicesArray = curChoices;
                         
                         // 配列にクイズデータを追加
                         [newItemsArray addObject:curItem];
-                    }
+                    }//if (curItem && curChoices){
 
-                }
-                
+                }//if(!(([[eachInLine objectAtIndex:0] isEqualToString:@"[EOF]"])||
+                 //     ([[eachInLine objectAtIndex:0] isEqualToString:@"章番号"]))){//最初と最後の行でなければ
+            
                 // クリア
                 curItem = nil;
                 curChoices = nil;
