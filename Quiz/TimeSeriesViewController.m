@@ -59,6 +59,8 @@ NSArray* gotou = nil;
     int forNum = 0;
     for ( NSString* object in array ) {
         if ( [object isKindOfClass:[NSArray class]] ) {
+            
+            //各配列を格納する
             switch(forNum){
                 case 0:YYYYMMDD = (NSArray*)object;
                     break;
@@ -75,9 +77,11 @@ NSArray* gotou = nil;
     NSLog(@"データ格納完了");
     
     //確認用
-//    for(forNum = 0;forNum < [YYYYMMDD count];forNum++){
-//        NSLog(@"YYYYMMDD:%d = %@",forNum, [YYYYMMDD objectAtIndex:forNum]);
-//    }
+    for(int i = 0;i < [YYYYMMDD count];i++){
+        NSLog(@"YYYYMMDD:%d = %@",i, [YYYYMMDD objectAtIndex:i]);
+        NSLog(@"%@における回答数%@回のうち%@回が正解、%@回が誤答",
+              YYYYMMDD[i], kaitou[i], seikai[i], gotou[i]);
+    }
     
     
     
@@ -280,21 +284,23 @@ NSArray* gotou = nil;
     if ([YYYYMMDD count] > 30){
         return 30;
     }else{
+        NSLog(@"count=%d", [YYYYMMDD count]);
         return [YYYYMMDD count];//作成するデータの個数
     }
 }
 
-    //そのプロット（CPTPlot）の field の recordIndex 番目のレコードの値を返す
+//そのプロット（CPTPlot）の field の recordIndex 番目のレコードの値を返す
 -(NSNumber *)numberForPlot:(CPTPlot *)plot
                      field:(NSUInteger)fieldEnum
                recordIndex:(NSUInteger)index
 {
+    NSLog(@"numberforPlot at field=%d, recordIndex=%d", fieldEnum, index);
 	if(fieldEnum == CPTBarPlotFieldBarLocation)
 		return [NSNumber numberWithDouble:index+1];
 	else
 	{
-//		if(plot.identifier == @"Bar Plot 1"){
-        if([plot.identifier isEqual:@"Bar plot 1"]){
+        //以下のwarningはisEqualToStringでもisEqualでも機能しない
+		if((NSString *)(plot.identifier) == @"Bar Plot 1"){
             //indexの値に応じた返り値を出力する
 //			return [NSNumber numberWithDouble:(index+1)*2.0f];//返すデータ
             NSLog(@"正解履歴%d = %@", index, [seikai objectAtIndex:index]);

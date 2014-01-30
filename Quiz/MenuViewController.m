@@ -38,7 +38,7 @@ NSMutableArray *sectQuestNoArray = nil;
     //参考：http://www.youtube.com/watch?v=2p8Gctq62oU
     
     [super viewDidLoad];
-
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -89,7 +89,6 @@ NSMutableArray *sectQuestNoArray = nil;
         
 
     }else{
-    
         //bubble sort
         for(int i = 0; i< sectQuestNameArray.count-1;i++){
             for(int j = sectQuestNameArray.count-1;j > i;j--){
@@ -107,6 +106,7 @@ NSMutableArray *sectQuestNoArray = nil;
                 //            NSLog(@"%d", j);
             }
         }
+        
         
         int forNum = 0;
         //確認用
@@ -194,13 +194,13 @@ NSMutableArray *sectQuestNoArray = nil;
     NSLog(@"%@, %@, %d, %d", questName, tempStr, sectNo, questNo);
     if(questName != nil){
         NSBundle *bundle = [NSBundle mainBundle];
-        NSString *path = [bundle pathForResource:
-                          [NSString stringWithFormat:@"zeimu%d", sectNo]
-                                          ofType:@"csv"];
+        NSString *path = [bundle pathForResource:@"test0000" ofType:@"csv"];
+//        NSString *path = [bundle pathForResource:
+//                          [NSString stringWithFormat:@"zeimu%d", sectNo]
+//                                          ofType:@"csv"];
         Quiz *quiz = [[Quiz alloc] initWithKokuhukuMode:questNo];
         [quiz readFromCSV:path];
         QuizItem *item = [quiz nextQuiz];
-        
         //問題文を抽出
         return item.question;
     }else{
@@ -331,7 +331,7 @@ NSMutableArray *sectQuestNoArray = nil;
     NSIndexPath *nip = (NSIndexPath*)sender;
     int selectedCellNo = nip.row;
     
-    int selectedSectNo = [self getSectNo:[sectQuestNameArray objectAtIndex:selectedCellNo]];
+//    int selectedSectNo = [self getSectNo:[sectQuestNameArray objectAtIndex:selectedCellNo]];
     int selectedQuestNo = [self getQuestNo:[sectQuestNameArray objectAtIndex:selectedCellNo]];
     
     // クイズ出題画面用のビューコントローラを取得するための入れ物
@@ -340,8 +340,9 @@ NSMutableArray *sectQuestNoArray = nil;
     
     // クイズデータのファイルパスを取得する
     NSBundle *bundle = [NSBundle mainBundle];
-    NSString *path= [bundle pathForResource:[NSString stringWithFormat:@"zeimu%d",selectedSectNo]
-                                     ofType:@"csv"];
+    NSString *path = [bundle pathForResource:@"test0000" ofType:@"csv"];
+//    NSString *path= [bundle pathForResource:[NSString stringWithFormat:@"zeimu%d",selectedSectNo]
+//                                     ofType:@"csv"];
     
     // クイズデータを読み込む
     Quiz *quiz = [[Quiz alloc] initWithKokuhukuMode:selectedQuestNo];

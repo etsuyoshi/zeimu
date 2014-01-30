@@ -105,33 +105,16 @@ static NSString *kQuizSegue = @"quiz";
 }
 
 
+//使われない
 //http://firstiphoneapp.blogspot.jp/2011/12/blog-post.html
 -(void) moveToTransViewCon{
-    NSLog(@"toTransViewCon");
     
     TransViewController* transViewController =
         [[TransViewController alloc]initWithNibName:@"TransViewController" bundle:nil];
     
-    NSLog(@"1%@", transViewController);
-
-//    UIWindow* keyWindow= [[UIApplication sharedApplication] keyWindow];
-    
-    NSLog(@"2%@", transViewController);
-    
-//    [keyWindow addSubview: TransViewController.view];
-    
-    
-    NSLog(@"3%@", transViewController);
-    
-    
     [[[[[UIApplication sharedApplication] delegate] window] rootViewController] presentViewController:transViewController animated:YES completion:nil];
-    NSLog(@"%@", transViewController);
-//    [self presentModalViewController:transViewController animated:YES];
     
     [self presentViewController:transViewController animated:YES completion:nil];
-    
-
-    NSLog(@"toTransViewCon");
 }
 
 //ボタンがある場合にsegueを用いる方法

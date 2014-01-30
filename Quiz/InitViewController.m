@@ -159,7 +159,6 @@
     }else if([segue.identifier isEqualToString:@"segueSelect6"]){
 //        path = [bundle pathForResource:@"zeimu6"
 //                                ofType:@"csv"];
-        NSLog(@"segueselect6");
         quiz = [[Quiz alloc]initWithSectNo:5];
         [quiz readFromCSV:path];
         vc = segue.destinationViewController;

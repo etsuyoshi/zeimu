@@ -26,6 +26,9 @@
 		345C3C3917E5B7DC00344173 /* zeimu3.csv in Resources */ = {isa = PBXBuildFile; fileRef = 345C3C3317E5B7DC00344173 /* zeimu3.csv */; };
 		345C3C3A17E5B7DC00344173 /* zeimu2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 345C3C3417E5B7DC00344173 /* zeimu2.csv */; };
 		345C3C3B17E5B7DC00344173 /* zeimu1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 345C3C3517E5B7DC00344173 /* zeimu1.csv */; };
+		34735BD7189A6043008D1B96 /* thumb_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 34735BD6189A6043008D1B96 /* thumb_120.png */; };
+		34735BDA189A60AF008D1B96 /* thumb_58.png in Resources */ = {isa = PBXBuildFile; fileRef = 34735BD8189A60AF008D1B96 /* thumb_58.png */; };
+		34735BDB189A60AF008D1B96 /* thumb_80.png in Resources */ = {isa = PBXBuildFile; fileRef = 34735BD9189A60AF008D1B96 /* thumb_80.png */; };
 		347A8BCC17A2951300588126 /* light.png in Resources */ = {isa = PBXBuildFile; fileRef = 347A8BC517A2951300588126 /* light.png */; };
 		347A8BCD17A2951300588126 /* desk.png in Resources */ = {isa = PBXBuildFile; fileRef = 347A8BC617A2951300588126 /* desk.png */; };
 		347A8BCE17A2951300588126 /* sunset.png in Resources */ = {isa = PBXBuildFile; fileRef = 347A8BC717A2951300588126 /* sunset.png */; };
@@ -194,6 +197,9 @@
 		345C3C3317E5B7DC00344173 /* zeimu3.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = zeimu3.csv; sourceTree = "<group>"; };
 		345C3C3417E5B7DC00344173 /* zeimu2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = zeimu2.csv; sourceTree = "<group>"; };
 		345C3C3517E5B7DC00344173 /* zeimu1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = zeimu1.csv; sourceTree = "<group>"; };
+		34735BD6189A6043008D1B96 /* thumb_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumb_120.png; sourceTree = "<group>"; };
+		34735BD8189A60AF008D1B96 /* thumb_58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumb_58.png; sourceTree = "<group>"; };
+		34735BD9189A60AF008D1B96 /* thumb_80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumb_80.png; sourceTree = "<group>"; };
 		347A8BC517A2951300588126 /* light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light.png; sourceTree = "<group>"; };
 		347A8BC617A2951300588126 /* desk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desk.png; sourceTree = "<group>"; };
 		347A8BC717A2951300588126 /* sunset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sunset.png; sourceTree = "<group>"; };
@@ -388,8 +394,11 @@
 		E95B49A91685D377005ECF09 = {
 			isa = PBXGroup;
 			children = (
+				34735BD8189A60AF008D1B96 /* thumb_58.png */,
+				34735BD9189A60AF008D1B96 /* thumb_80.png */,
 				3424BA4A178C4043001A8F2C /* iOS */,
 				3442745B177BDBBC002CF50A /* thumb_114.png */,
+				34735BD6189A6043008D1B96 /* thumb_120.png */,
 				34427459177BDBA1002CF50A /* thumb_57.png */,
 				E95B49BE1685D377005ECF09 /* zeimu3 */,
 				E95B49B71685D377005ECF09 /* Frameworks */,
@@ -603,6 +612,7 @@
 				3442745E177BF434002CF50A /* brown_light.jpg in Resources */,
 				3400E8F5177DAD4C00523BB0 /* maru.png in Resources */,
 				3400E8F9177DB67C00523BB0 /* batu.png in Resources */,
+				34735BD7189A6043008D1B96 /* thumb_120.png in Resources */,
 				347A8BCC17A2951300588126 /* light.png in Resources */,
 				347A8BCD17A2951300588126 /* desk.png in Resources */,
 				347A8BCE17A2951300588126 /* sunset.png in Resources */,
@@ -618,11 +628,13 @@
 				34B08B9117A8FFB0002132CC /* button_第八章.png in Resources */,
 				34B08B9217A8FFB0002132CC /* button_第七章.png in Resources */,
 				34B08B9317A8FFB0002132CC /* button_第六章.png in Resources */,
+				34735BDB189A60AF008D1B96 /* thumb_80.png in Resources */,
 				34B08B9417A8FFB0002132CC /* button_第五章.png in Resources */,
 				34B08B9517A8FFB0002132CC /* button_第四章.png in Resources */,
 				34B08B9617A8FFB0002132CC /* button_第三章.png in Resources */,
 				34B08B9717A8FFB0002132CC /* button_第二証.png in Resources */,
 				34B08B9817A8FFB0002132CC /* button_第一章.png in Resources */,
+				34735BDA189A60AF008D1B96 /* thumb_58.png in Resources */,
 				34B08B9917A8FFB0002132CC /* button_戻る.png in Resources */,
 				34B08B9A17A8FFB0002132CC /* button_設定.png in Resources */,
 				34B08B9B17A8FFB0002132CC /* button_成績表.png in Resources */,

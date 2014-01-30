@@ -87,9 +87,10 @@ NSArray *arrSectName;
     // 返す問題を決定する
     NSInteger ind = 0;
     if(!_isKokuhukuMode){
-        ind = random() % [tempArray count];
+//        ind = random() % [tempArray count];
+        ind = arc4random() % [tempArray count];
         NSLog(@"%d@Quiz:nextQuiz_%d", ind, _isKokuhukuMode);
-    }else{
+    }else{//弱点克服モードとして呼ばれた時
         ind = _jakutenNo - 1;//ind=0がNo001に相当する
         NSLog(@"%d@Quiz:nextQuiz_%d", ind, _isKokuhukuMode);
     }
