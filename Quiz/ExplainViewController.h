@@ -21,4 +21,6 @@
 
 - (IBAction)pushBtn:(id)sender;
 
+- (IBAction)goNextQuest:(id)sender;
+
 @end

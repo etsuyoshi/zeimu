@@ -251,8 +251,9 @@ NSArray *arrSectName;
     NSMutableArray *curChoices = nil;//Current Choices
     
     //一行の中でカンマに区切られた値
-    //   0      1       2       3     4     5  6  7  8    9         10  11
-    //【章番号、問題番号、問題種別、質問文、選択肢１、２、３、４、５、正解番号、正解文章、解説
+    //   0      1       2       3     4     5  6  7  8    9         10      11      12
+    //【章番号、問題番号、問題種別、質問文、選択肢１、２、３、４、５、正解番号、正解文章、解説、類似問題回避番号
+    //類似問題回避番号は類似の問題を回避するために使用できるが、現状不使用：将来的には同じ問題を重複して出題しないようにもできる)
     NSArray *eachInLine = nil;
     
     for (NSString *line in linesArray)
@@ -319,10 +320,32 @@ NSArray *arrSectName;
                     curItem.rightAnswer = [eachInLine objectAtIndex:10];
                     curItem.explanation = [eachInLine objectAtIndex:11];
                     
-                    // 選択肢の配列に追加
+                    
+                    //ランダムに選択肢を並べ替えるため、既にcurChoicesに格納した配列をarrTmpにも格納して重複しないようにする
+                    NSMutableArray *arrTmp = [NSMutableArray array];
+                    // 選択肢の配列に追加:現状全て１番が解答になっているのでここをランダムに配列する(解答は文字列判定)
                     for(int selectionIndex = 4;selectionIndex < 9;selectionIndex ++){
-                        [curChoices addObject:[eachInLine objectAtIndex:selectionIndex]];
+                        int _index = arc4random() % 5;//0〜4の乱数を作成
+                        if([arrTmp count] > 0){//最初は重複を気にしなくても乱数で割り振られた数字をそのまま格納
+                            for(;;){
+                                int i=0;
+                                for(i =0;i < [arrTmp count];i++){
+                                    if(_index == [arrTmp[i] integerValue]){
+                                        break;
+                                    }
+                                }
+                                if(i == [arrTmp count]){
+                                    //最後まで検索して既に格納済でなければループを抜ける
+                                    break;
+                                }else{
+                                    _index = arc4random() % 5;//再度トライ
+                                }
+                            }
+                        }
+                        [curChoices addObject:[eachInLine objectAtIndex:4+_index]];
+                        [arrTmp addObject:[NSNumber numberWithInteger:_index]];
                     }
+                    arrTmp = nil;//解放
                     
                     //空白行である場合、txtファイルであれば選択肢を決定させる必要があるが、
                     //csvファイルである場合に空白行はないので、改行がなされた場合にのみ以下のコードを行う

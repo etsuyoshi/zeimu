@@ -7,7 +7,6 @@
 //
 
 #import "ExplainViewController.h"
-
 @interface ExplainViewController ()
 
 @end
@@ -66,4 +65,18 @@
 //    //なぜか改行が認識されない？
     return returnStr;
 }
+
+-(IBAction)goNextQuest:(id)sender{
+//    NSLog(@"aaa");
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    [ud setInteger:1 forKey:@"nextPage"];
+    
+    //QuizRunningViewControllerに戻ったら次の問題に進むように判定するためのNSUserDefaultデータ
+    [self dismissViewControllerAnimated:YES completion:^{
+        NSLog(@"finished ");
+        
+        
+    }];
+}
+
 @end

@@ -27,4 +27,6 @@
 // 答えが合っているかチェックするメソッド
 - (BOOL)checkIsRightAnswer:(NSString *)answer;
 
+- (NSString *)getRightAnswer;
+
 @end

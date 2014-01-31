@@ -29,6 +29,7 @@
 		34735BD7189A6043008D1B96 /* thumb_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 34735BD6189A6043008D1B96 /* thumb_120.png */; };
 		34735BDA189A60AF008D1B96 /* thumb_58.png in Resources */ = {isa = PBXBuildFile; fileRef = 34735BD8189A60AF008D1B96 /* thumb_58.png */; };
 		34735BDB189A60AF008D1B96 /* thumb_80.png in Resources */ = {isa = PBXBuildFile; fileRef = 34735BD9189A60AF008D1B96 /* thumb_80.png */; };
+		34735BDD189A7806008D1B96 /* button_次の問題へ.png in Resources */ = {isa = PBXBuildFile; fileRef = 34735BDC189A7806008D1B96 /* button_次の問題へ.png */; };
 		347A8BCC17A2951300588126 /* light.png in Resources */ = {isa = PBXBuildFile; fileRef = 347A8BC517A2951300588126 /* light.png */; };
 		347A8BCD17A2951300588126 /* desk.png in Resources */ = {isa = PBXBuildFile; fileRef = 347A8BC617A2951300588126 /* desk.png */; };
 		347A8BCE17A2951300588126 /* sunset.png in Resources */ = {isa = PBXBuildFile; fileRef = 347A8BC717A2951300588126 /* sunset.png */; };
@@ -41,6 +42,7 @@
 		347A8BDB17A68BBE00588126 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347A8BDA17A68BBE00588126 /* MenuViewController.m */; };
 		347A8BE117A7B93B00588126 /* WrongQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 347A8BE017A7B93B00588126 /* WrongQuestion.m */; };
 		347C7031178C4367004DCDE6 /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347C7030178C4367004DCDE6 /* ResultViewController.m */; };
+		34854588189B5D6400B9A755 /* test0000.csv in Resources */ = {isa = PBXBuildFile; fileRef = 34854587189B5D6400B9A755 /* test0000.csv */; };
 		348B1CA417954F00003C361E /* ArrayStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 348B1CA317954F00003C361E /* ArrayStore.m */; };
 		349B1935177B4BCD0099DB56 /* InitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 349B1934177B4BCD0099DB56 /* InitViewController.m */; };
 		349B1938177B5A8B0099DB56 /* TransViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 349B1937177B5A8B0099DB56 /* TransViewController.m */; };
@@ -75,7 +77,6 @@
 		34B08BAB17A907BC002132CC /* button-回答終了_mini.png in Resources */ = {isa = PBXBuildFile; fileRef = 34B08BAA17A907BC002132CC /* button-回答終了_mini.png */; };
 		34B08BAD17A907D7002132CC /* button-解説_mini.png in Resources */ = {isa = PBXBuildFile; fileRef = 34B08BAC17A907D7002132CC /* button-解説_mini.png */; };
 		34CD303817A9203C0091ADEC /* button-スタート.png in Resources */ = {isa = PBXBuildFile; fileRef = 34CD303717A9203C0091ADEC /* button-スタート.png */; };
-		34FD72D6189A3B6900648161 /* test0000.csv in Resources */ = {isa = PBXBuildFile; fileRef = 34FD72D5189A3B6900648161 /* test0000.csv */; };
 		E95B49B91685D377005ECF09 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E95B49B81685D377005ECF09 /* UIKit.framework */; };
 		E95B49BB1685D377005ECF09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E95B49BA1685D377005ECF09 /* Foundation.framework */; };
 		E95B49BD1685D377005ECF09 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E95B49BC1685D377005ECF09 /* CoreGraphics.framework */; };
@@ -200,6 +201,7 @@
 		34735BD6189A6043008D1B96 /* thumb_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumb_120.png; sourceTree = "<group>"; };
 		34735BD8189A60AF008D1B96 /* thumb_58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumb_58.png; sourceTree = "<group>"; };
 		34735BD9189A60AF008D1B96 /* thumb_80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumb_80.png; sourceTree = "<group>"; };
+		34735BDC189A7806008D1B96 /* button_次の問題へ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_次の問題へ.png"; sourceTree = "<group>"; };
 		347A8BC517A2951300588126 /* light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light.png; sourceTree = "<group>"; };
 		347A8BC617A2951300588126 /* desk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desk.png; sourceTree = "<group>"; };
 		347A8BC717A2951300588126 /* sunset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sunset.png; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 		347A8BE017A7B93B00588126 /* WrongQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WrongQuestion.m; path = ../WrongQuestion.m; sourceTree = "<group>"; };
 		347C702F178C4367004DCDE6 /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
 		347C7030178C4367004DCDE6 /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
+		34854587189B5D6400B9A755 /* test0000.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test0000.csv; sourceTree = "<group>"; };
 		348B1CA217954EEA003C361E /* ArrayStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayStore.h; sourceTree = "<group>"; };
 		348B1CA317954F00003C361E /* ArrayStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayStore.m; sourceTree = "<group>"; };
 		349B1933177B4BCD0099DB56 /* InitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitViewController.h; sourceTree = "<group>"; };
@@ -252,7 +255,6 @@
 		34B08BAA17A907BC002132CC /* button-回答終了_mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-回答終了_mini.png"; sourceTree = "<group>"; };
 		34B08BAC17A907D7002132CC /* button-解説_mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-解説_mini.png"; sourceTree = "<group>"; };
 		34CD303717A9203C0091ADEC /* button-スタート.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-スタート.png"; sourceTree = "<group>"; };
-		34FD72D5189A3B6900648161 /* test0000.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test0000.csv; sourceTree = "<group>"; };
 		E95B49B41685D377005ECF09 /* zeimu3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zeimu3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E95B49B81685D377005ECF09 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E95B49BA1685D377005ECF09 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -469,7 +471,7 @@
 		E95B49BF1685D377005ECF09 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				34FD72D5189A3B6900648161 /* test0000.csv */,
+				34854587189B5D6400B9A755 /* test0000.csv */,
 				345C3C3017E5B7DC00344173 /* zeimu6.csv */,
 				345C3C3117E5B7DC00344173 /* zeimu5.csv */,
 				345C3C3217E5B7DC00344173 /* zeimu4.csv */,
@@ -497,6 +499,7 @@
 				34B08B8717A8FFB0002132CC /* button_第二証.png */,
 				34B08B8817A8FFB0002132CC /* button_第一章.png */,
 				34B08B8917A8FFB0002132CC /* button_戻る.png */,
+				34735BDC189A7806008D1B96 /* button_次の問題へ.png */,
 				34B08B8A17A8FFB0002132CC /* button_設定.png */,
 				34B08B8B17A8FFB0002132CC /* button_成績表.png */,
 				34B08B8C17A8FFB0002132CC /* button_弱点克服.png */,
@@ -590,13 +593,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34FD72D6189A3B6900648161 /* test0000.csv in Resources */,
 				E95B49C31685D377005ECF09 /* InfoPlist.strings in Resources */,
 				E95B49CB1685D377005ECF09 /* Default.png in Resources */,
 				E95B49CD1685D377005ECF09 /* Default@2x.png in Resources */,
 				E95B49CF1685D377005ECF09 /* Default-568h@2x.png in Resources */,
 				E95B49D21685D377005ECF09 /* MainStoryboard.storyboard in Resources */,
 				E95B49DC1685D3E9005ECF09 /* quiz.txt in Resources */,
+				34854588189B5D6400B9A755 /* test0000.csv in Resources */,
 				E992A1E71688A05500E5A17D /* NotRight.aiff in Resources */,
 				E992A1E81688A05500E5A17D /* Right.aiff in Resources */,
 				3431C82E177995B200FE8551 /* ios_test.csv in Resources */,
@@ -618,6 +621,7 @@
 				347A8BCE17A2951300588126 /* sunset.png in Resources */,
 				347A8BCF17A2951300588126 /* building.png in Resources */,
 				347A8BD017A2951300588126 /* building2.png in Resources */,
+				34735BDD189A7806008D1B96 /* button_次の問題へ.png in Resources */,
 				347A8BD117A2951300588126 /* street.png in Resources */,
 				347A8BD217A2951300588126 /* aman.png in Resources */,
 				347A8BD617A2AF6B00588126 /* bird.png in Resources */,

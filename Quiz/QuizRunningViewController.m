@@ -146,9 +146,21 @@ long sumOfWrong = 0;
     
     //誤答回数
     sumOfWrong = 0;
-	
-    // 最初の問題を表示する
     [self showNextQuiz];
+	
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    if([ud integerForKey:@"nextPage"]){
+        [ud setInteger:0 forKey:@"nextPage"];//元(int 1)に戻す
+        //ビューが再表示された時に問題を更新するか判定：ExplanationViewControllerからこのクラスに戻ってきた時のため
+        //NSLog(@"self.flag=true");
+        // 最初の問題を表示する
+        [self showNextQuiz];
+    }
 }
 
 // デバイスの回転対応
@@ -161,6 +173,8 @@ long sumOfWrong = 0;
 // 次の問題を表示する
 - (void)showNextQuiz
 {
+    
+    NSLog(@"showNextQuiz");
     //正解不正解判定画像を隠す
     maruImageView_.hidden = YES;
     batuImageView_.hidden = YES;
@@ -170,15 +184,18 @@ long sumOfWrong = 0;
     QuizItem *item = nil;
     item = [self.quiz nextQuiz];
     
+    NSLog(@"sentence=%@", item.question);
+    
     //章番号を設定する
     sectorName = item.sectorName;
     
     //問題番号を設定する
     questionNo = item.questionNo;
     
+    NSLog(@"question.text=%@", self.questionTextView.text);//test
     // 問題文を設定する
     self.questionTextView.text = item.question;
-    
+    NSLog(@"question.text=%@", self.questionTextView.text);//test
     // 選択肢を取得する
     NSArray *choices = item.randomChoicesArray;
     
@@ -190,6 +207,15 @@ long sumOfWrong = 0;
                         self.answerButton4,
                         self.answerButton5,
                         nil];
+    
+    
+    
+    // ボタンを有効にする
+    self.answerButton1.enabled = YES;
+    self.answerButton2.enabled = YES;
+    self.answerButton3.enabled = YES;
+    self.answerButton4.enabled = YES;
+    self.answerButton5.enabled = YES;
     
     // ボタンのラベルに選択肢を設定する
     NSUInteger i;
@@ -240,12 +266,22 @@ long sumOfWrong = 0;
 //    NSLog(@"%d", answering);
 //    NSLog(@"%d", UncorrectAns);
 
+    
+    
+    
+    
+    //回答数を更新する
+    answering++;
+    [eachQuestionDefaults setObject:[NSString stringWithFormat:@"%d", answering]
+                             forKey:[NSString stringWithFormat:@"Answer%@%@", item.sectorName, item.questionNo]];
+    
+    
     // 正解か判定する
     if ([item checkIsRightAnswer:str])
     {
         // 正解なので、「○」を先頭に追加する
-        [sender setTitle:[NSString stringWithFormat:@"○ %@", str]
-                forState:UIControlStateNormal];
+//        [sender setTitle:[NSString stringWithFormat:@"○ %@", str]
+//                forState:UIControlStateNormal];
         
         // 効果音を再生する
         AudioServicesPlaySystemSound(self.rightSound);
@@ -254,6 +290,12 @@ long sumOfWrong = 0;
         // 正解画像を表示
         maruImageView_.hidden = NO;
         batuImageView_.hidden = YES;
+        
+        
+        // 正解の場合のみ次の問題を少し間を空けてから呼び出す
+        [self performSelector:@selector(nextQuiz:)
+                   withObject:nil
+                   afterDelay:kNextQuizInterval];
 
     }
     else
@@ -264,9 +306,14 @@ long sumOfWrong = 0;
         //成績格納用誤答回数
         UncorrectAns ++;
         
+        //誤答数を更新する
+        [eachQuestionDefaults setObject:[NSString stringWithFormat:@"%d", UncorrectAns]
+                                 forKey:[NSString stringWithFormat:@"UncorrectAns%@%@", item.sectorName, item.questionNo]];
+        
+        
         // 不正解なので、「×」を先頭に追加する
-        [sender setTitle:[NSString stringWithFormat:@"× %@", str]
-                forState:UIControlStateNormal];
+//        [sender setTitle:[NSString stringWithFormat:@"× %@", str]
+//                forState:UIControlStateNormal];
         
         // 効果音を再生する
         AudioServicesPlaySystemSound(self.notRightSound);
@@ -277,19 +324,24 @@ long sumOfWrong = 0;
         // 不正解画像を表示
         maruImageView_.hidden = YES;
         batuImageView_.hidden = NO;
+        
+        
+        //正解を表示して解説の表示もしくは次の問題に進むか問う
+        
+        UIAlertView *alert =
+        [[UIAlertView alloc]
+         initWithTitle:@"残念！"
+         message:[NSString stringWithFormat:@"本問題では\n「%@」\nが正解です。", [item getRightAnswer]]
+         delegate: self
+         cancelButtonTitle:@"次に進む"
+         otherButtonTitles:@"解説を見る", nil];
+        
+        [alert show];
+        
     }
     
     
-    answering++;
-//    NSLog(@"%d", answering);
-//    NSLog(@"%d", UncorrectAns);
-//    NSLog(@"%@", [NSString stringWithFormat:@"%d", answering]);
-//    NSLog(@"%@", [NSString stringWithFormat:@"%d", UncorrectAns]);
     
-    [eachQuestionDefaults setObject:[NSString stringWithFormat:@"%d", answering]
-                             forKey:[NSString stringWithFormat:@"Answer%@%@", item.sectorName, item.questionNo]];
-    [eachQuestionDefaults setObject:[NSString stringWithFormat:@"%d", UncorrectAns]
-                             forKey:[NSString stringWithFormat:@"UncorrectAns%@%@", item.sectorName, item.questionNo]];
     
 //    確認用
 //    NSUserDefaults* eachQuestionDefaultsAfter = [NSUserDefaults standardUserDefaults];
@@ -299,15 +351,34 @@ long sumOfWrong = 0;
 //    NSLog(@"更新前回答数(%@) = %d",[NSString stringWithFormat:@"Answer%@%@", item.sectorName, item.questionNo], answeringAfter);
 //    NSLog(@"更新前回答数(%@) = %d",[NSString stringWithFormat:@"UncorrectAns%@%@", item.sectorName, item.questionNo], UncorrectAnsAfter);
 
-    // 次の問題を少し間を空けてから呼び出す
-    [self performSelector:@selector(nextQuiz:)
-               withObject:nil
-               afterDelay:kNextQuizInterval];
+    
+}
+
+// 選択ボタンが押下された際に呼ばれます
+- (void)alertView: (UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    // 押されたボタンの確認
+    switch (buttonIndex) {
+        case 0:{
+            // [次に進む]が押された場合の処理
+            [self nextQuiz:nil];
+            break;
+        }
+        case 1:{
+            // [解説を見る]が押された場合の処理
+            [self performSegueWithIdentifier:@"explainSegue" sender:self];
+            
+            break;
+        }
+        default:
+            break;
+    }
 }
 
 // 遅延して呼び出されるメソッド
 - (void)nextQuiz:(id)sender
 {
+    NSLog(@"nextQui");
     if (self.quiz.isKokuhukuMode){
         //弱点克服モードの場合、一問解答した後は画面を戻す
 //        [self dismissModalViewControllerAnimated:YES];//deprecated!
@@ -448,7 +519,7 @@ long sumOfWrong = 0;
         //_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
     }
     else
-    {
+    {//弱点克服モードでもなく、問題数が規定数以上に言っている訳でもない場合、次の問題に進む
         // ボタンを有効にする
         self.answerButton1.enabled = YES;
         self.answerButton2.enabled = YES;
@@ -474,7 +545,7 @@ long sumOfWrong = 0;
     
     // 出題された問題の解説情報を取得する→解説文を取得してviewCon.explanationに渡す
     QuizItem *item = [self.quiz.usedQuizItems lastObject];
-
+    
     if ([segue.identifier isEqualToString:@"explainSegue"]) {
         ExplainViewController *viewCon = segue.destinationViewController;
         viewCon.explanation = item.explanation;//渡すべき値(解説文)

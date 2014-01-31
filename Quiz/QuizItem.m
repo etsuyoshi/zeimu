@@ -61,9 +61,14 @@
 - (BOOL)checkIsRightAnswer:(NSString *)answer
 {
     // プロパティ「rightAnswer」と文字列を比較して一致すれば正解
-    NSLog(@"%@", self.rightAnswer);
-    NSLog(@"%@", answer);
+    NSLog(@"rightAnswer = %@", self.rightAnswer);
+    NSLog(@"selected = %@", answer);
     return [self.rightAnswer isEqualToString:answer];
+}
+
+- (NSString *)getRightAnswer{
+    
+    return self.rightAnswer;
 }
 
 @end

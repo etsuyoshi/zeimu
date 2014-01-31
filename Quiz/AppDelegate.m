@@ -12,6 +12,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+//  storyBoardのボタンは以下のサイトで作成(Button Generator)
+//    http://jirox.net/AsButtonGen/
+//    FF8540
+    
+    
+    
     // 乱数生成のための初期化処理
     srandomdev();
     
